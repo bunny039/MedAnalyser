@@ -1,0 +1,35 @@
+# Medical Report Analyzer - Backend Dependencies
+
+# Web Framework
+fastapi>=0.104.0
+uvicorn>=0.24.0
+streamlit>=1.28.0
+
+# Configuration
+python-dotenv>=1.0.0
+
+# Request Handling
+python-multipart>=0.0.6
+
+# Data Processing
+pypdf>=3.17.0
+python-docx>=1.1.0
+pillow>=10.1.0
+
+# Vector Database
+chromadb>=0.4.22
+faiss-cpu>=1.7.4
+
+# Embeddings
+sentence-transformers>=2.2.2
+
+# HTTP Client
+requests>=2.31.0
+
+# Utilities
+pydantic>=2.5.0
+pydantic-settings>=2.1.0
+
+# Medical/NLP (optional)
+nltk>=3.8.1
+spacy>=3.7.0

@@ -1,0 +1,10 @@
+# Ollama Models to Install
+
+# Base model for medical report analysis
+llama3
+
+# Optional: For embeddings
+nomic-embed-text
+
+# Optional: For better medical understanding
+medllama2

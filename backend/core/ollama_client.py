@@ -6,7 +6,40 @@ Python client to interact with Ollama locally for LLM inference
 import requests
 from typing import Optional
 from backend.app.config import OLLAMA_BASE_URL, OLLAMA_MODEL
+import requests
 
+
+class OllamaClient:
+
+    def __init__(self, base_url="http://127.0.0.1:11434"):
+        self.base_url = base_url
+
+
+    def generate(self, prompt, model="llama3:8b"):
+
+        url = f"{self.base_url}/api/generate"
+
+        payload = {
+            "model": model,
+            "prompt": prompt,
+            "stream": False
+        }
+
+        response = requests.post(url, json=payload)
+
+        return response.json()["response"]
+
+
+
+if __name__ == "__main__":
+
+    client = OllamaClient()
+
+    result = client.generate(
+        "Explain red blood cells in one sentence."
+    )
+
+    print(result)
 
 # Default timeout for requests (in seconds)
 DEFAULT_TIMEOUT = 120
